@@ -10,12 +10,12 @@ from src.extract.extract import (
 
 @pytest.fixture
 def mock_log_extract_success(mocker):
-    return mocker.patch("src.extract.extract_data.log_extract_success")
+    return mocker.patch("src.extract.extract.log_extract_success")
 
 
 @pytest.fixture
 def mock_logger(mocker):
-    return mocker.patch("src.extract.extract_data.logger")
+    return mocker.patch("src.extract.extract.logger")
 
 
 def test_extract_data_csv_to_dataframe(mocker):
@@ -23,7 +23,7 @@ def test_extract_data_csv_to_dataframe(mocker):
         {"id": [1, 2, 3], "name": ["Alice", "Bob", "Charlie"]}
     )
     mocker.patch(
-        "src.extract.extract_data.pd.read_csv", return_value=mock_df
+        "src.extract.extract.pd.read_csv", return_value=mock_df
     )
 
     # Call the function
@@ -42,14 +42,14 @@ def test_log_extract_success_data(
         {"id": [1, 2, 3], "name": ["Alice", "Bob", "Charlie"]}
     )
     mocker.patch(
-        "src.extract.extract_data.pd.read_csv", return_value=mock_df
+        "src.extract.extract.pd.read_csv", return_value=mock_df
     )
 
     # Mock timeit.default_timer to control the execution time
     mock_start_time = 100.0
     mock_end_time = 100.5
     mocker.patch(
-        "src.extract.extract_data.timeit.default_timer",
+        "src.extract.extract.timeit.default_timer",
         side_effect=[mock_start_time, mock_end_time],
     )
 
@@ -65,7 +65,7 @@ def test_log_extract_success_data(
 def test_log_data_error(mocker, mock_logger):
     # Mock pd.read_csv to raise an exception
     mocker.patch(
-        "src.extract.extract_data.pd.read_csv",
+        "src.extract.extract.pd.read_csv",
         side_effect=Exception(f"Failed to load CSV file: {FILE_PATH}"),
     )
 

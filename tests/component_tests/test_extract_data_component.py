@@ -8,9 +8,9 @@ from src.extract.extract import (
 )
 
 """
-Component Tests for extract_customers() Function
+Component Tests for extract_data() Function
 
-These tests validate the extract_customers() function as a complete component,
+These tests validate the extract_data() function as a complete component,
 testing its behaviour with real file system interactions and actual data.
 
 Test Coverage:
@@ -27,27 +27,27 @@ Component tests differ from unit tests by:
 
 
 @pytest.fixture
-def expected_unclean_customers():
-    return pd.read_csv("data/raw/unclean_customers.csv")
+def expected_unclean_data():
+    return pd.read_csv("data/raw/unclean_data.csv")
 
 
-def test_extract_customers_returns_correct_dataframe(
-    expected_unclean_customers,
+def test_extract_data_returns_correct_dataframe(
+    expected_unclean_data,
 ):
     # Call the function to get the DataFrame
-    df = extract_customers()
+    df = extract_data()
 
-    # Verify the DataFrame is the same as the expected unclean customers
-    pd.testing.assert_frame_equal(df, expected_unclean_customers)
+    # Verify the DataFrame is the same as the expected unclean data
+    pd.testing.assert_frame_equal(df, expected_unclean_data)
 
 
-def test_extract_customers_performance():
+def test_extract_data_performance():
     execution_time = timeit.timeit(
-        "extract_customers()", globals=globals(), number=1
+        "extract_data()", globals=globals(), number=1
     )
 
     # Call the function to get the DataFrame
-    df = extract_customers()
+    df = extract_data()
 
     # Load time per row
     actual_execution_time_per_row = execution_time / df.shape[0]
@@ -60,15 +60,15 @@ def test_extract_customers_performance():
     )
 
 
-@patch("src.extract.extract_customers.FILE_PATH", "nonexistent_file.csv")
-def test_extract_customers_file_not_found():
+@patch("src.extract.extract.FILE_PATH", "nonexistent_file.csv")
+def test_extract_data_file_not_found():
     with pytest.raises(Exception, match="Failed to load CSV file"):
-        extract_customers()
+        extract_data()
 
 
-def test_extract_customers_corrupt_csv():
-    corrupt_file_path = "tests/test_data/corrupt_customers.csv"
+def test_extract_data_corrupt_csv():
+    corrupt_file_path = "tests/test_data/corrupt_csv.csv"
 
-    with patch("src.extract.extract_customers.FILE_PATH", corrupt_file_path):
+    with patch("src.extract.extract.FILE_PATH", corrupt_file_path):
         with pytest.raises(Exception, match="Failed to load CSV file"):
-            extract_customers()
+            extract_data()

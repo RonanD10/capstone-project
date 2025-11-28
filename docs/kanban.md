@@ -2,22 +2,13 @@
 
 ```mermaid
 kanban
-    To do   
-
-        
-
-        
-
-        Tests are written to verify the  data extraction process
-
+    To do
         Configure run_app/run_etl in .toml
-
         Populate Definition of Done file
 
     In progress
         
         Create detailed project plan using user stories
-        Write test to verify data extraction process
         
 
     Done
@@ -26,6 +17,7 @@ kanban
         Set up project skeleton
         Set up older Python 3.12 virtual environment for Streamlit and install requirements
         Extract data successfully
+        Write test to verify data extraction process
         
 ```
 

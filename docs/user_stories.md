@@ -15,10 +15,10 @@ So that it can be transformed ready for analysis
 
 - [x] Data is extracted from the .csv file  
 - [x] Data is extracted in less than 30s 
-- [] Extraction occurs without errors and data integrity is maintained
+- [x] Extraction occurs without errors and data integrity is maintained
 - [x] Successful extractions are logged
 - [x] Data is stored in Pandas DataFrame for further processing
-- [ ] Tests are written to verify the data extraction process 
+- [x] Tests are written to verify the data extraction process 
 
 ### USER STORY 2 - Basic Data Cleaning 
 ```text
