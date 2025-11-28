@@ -21,31 +21,30 @@ def main():
         # Extract phase
         logger.info("Beginning data extraction phase")
         extracted_data = extract_data()
-        transactions, customers = extracted_data
         logger.info("Data extraction phase completed")
 
         # Transformation phase
-        logger.info("Beginning data transformation phase")
-        transformed_data = transform_data(extracted_data)
-        # Create output directory and file
-        output_dir = Path("data/processed")
-        output_dir.mkdir(parents=True, exist_ok=True)
+        # logger.info("Beginning data transformation phase")
+        # transformed_data = transform_data(extracted_data)
+        # # Create output directory and file
+        # output_dir = Path("data/processed")
+        # output_dir.mkdir(parents=True, exist_ok=True)
 
-        # Create high_value_customers.csv for E2E test validation
-        output_file = output_dir / "high_value_customers.csv"
-        customers.to_csv(output_file, index=False)
-        logger.info("Data transformation phase completed")
+        # # Create high_value_customers.csv for E2E test validation
+        # output_file = output_dir / "high_value_customers.csv"
+        # customers.to_csv(output_file, index=False)
+        # logger.info("Data transformation phase completed")
 
-        # Load phase
-        logger.info("Beginning data load phase")
-        load_data(transformed_data)
-        logger.info("Data load phase completed")
+        # # Load phase
+        # logger.info("Beginning data load phase")
+        # load_data(transformed_data)
+        # logger.info("Data load phase completed")
 
-        logger.info("ETL pipeline completed successfully")
-        print(
-            f"ETL pipeline run successfully in "
-            f"{os.getenv('ENV', 'error')} environment!"
-        )
+    #     logger.info("ETL pipeline completed successfully")
+    #     print(
+    #         f"ETL pipeline run successfully in "
+    #         f"{os.getenv('ENV', 'error')} environment!"
+    #     )
     except Exception as e:
         logger.error(f"ETL pipeline failed: {e}")
         sys.exit(1)
