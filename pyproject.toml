@@ -20,7 +20,8 @@ dynamic = ["dependencies"]
 Homepage = "https://github.com/RonanD10/capstone-project"
 
 [project.scripts]
-
+run_etl = "scripts.run_etl:main"
+run_tests = "tests.run_tests:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -2,16 +2,14 @@ import os
 import sys
 from pathlib import Path
 from config.env_config import setup_env
-from src.extract.extract import extract_data
-from src.load.load import load_data
-from src.transform.transform import transform_data
+from src.etl.extract.extract import extract_data
+# from src.load.load import load_data
+from src.etl.transform.transform import transform_data
 from src.utils.logging_utils import setup_logger
 
 
 def main():
-    # Get the argument from the run_etl command and set up the environment
-    setup_env(sys.argv)
-
+    
     # Setup ETL pipeline logger
     logger = setup_logger("etl_pipeline", "etl_pipeline.log")
 
@@ -24,16 +22,16 @@ def main():
         logger.info("Data extraction phase completed")
 
         # Transformation phase
-        # logger.info("Beginning data transformation phase")
-        # transformed_data = transform_data(extracted_data)
-        # # Create output directory and file
-        # output_dir = Path("data/processed")
-        # output_dir.mkdir(parents=True, exist_ok=True)
+        logger.info("Beginning data transformation phase")
+        # Create output directory and file
+        output_dir = Path("data/processed")
+        output_dir.mkdir(parents=True, exist_ok=True)
+        transformed_data = transform_data(extracted_data)
 
         # # Create high_value_customers.csv for E2E test validation
         # output_file = output_dir / "high_value_customers.csv"
         # customers.to_csv(output_file, index=False)
-        # logger.info("Data transformation phase completed")
+        logger.info("Data transformation phase completed")
 
         # # Load phase
         # logger.info("Beginning data load phase")

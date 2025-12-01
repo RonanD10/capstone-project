@@ -1,5 +1,4 @@
 ## Epic 1 
-
 ```text
 As a DATA ENGINEER
 I want a working end-to-end data pipeline and Streamlit app
@@ -20,36 +19,29 @@ So that it can be transformed ready for analysis
 - [x] Data is stored in Pandas DataFrame for further processing
 - [x] Tests are written to verify the data extraction process 
 
-### USER STORY 2 - Basic Data Cleaning 
+
+### USER STORY 2 - Data Cleaning 
+```text
+As a DATA ENGINEER/ANALYST
+I want to have clean data, standardised data 
+So that it can be analysed easier
+```
+- [x] Thorough data cleaning exploration has been conducted 
+- [x] All missing values have been handled
+- [x] All duplicates have been handled
+- [x] All strings have been standardised
+- [x] All categorical variables have been handled 
+- [x] Cleaning occurs without errors and data integrity is maintained
+- [ ] Tests are written to verify the data cleaning process 
+
+
+### USER STORY 3 - Basic Data Enrichment/Aggregation
 ```text
 As a DATA ENGINEER/ANALYST
 I want 
 So that 
 ```
-kanban
-    To do  Data cleaning: handle missing values, correct data types
-        Data standardisation: consistent formatting 
-        Data Enrichment: add new features, add calculated fields 
-        Data aggregation: summarise data 
-        Refer to Pandas demo folders
-
-    In progress
-
-
-    Done
-        Set up Jupyter notebooks on pandas kernel
-        Download data set 
-- [ ] 
-- [ ]
-
-### USER STORY 3 - Basic Data Transformation
-```text
-As a DATA ENGINEER/ANALYST
-I want 
-So that 
-```
-
-- [ ] 
+- [ ] Thorough data exploration has been conducted
 - [ ] 
 
 ### USER STORY 4 - Load Data 
@@ -86,17 +78,26 @@ So that
 
 - [ ] 
 
-
+### USER STORY 7 - Automated Scripting
+```text
+As a DATA ENGINEER/ANALYST
+I want 
+So that 
+```
 
 
 
 ## Epic 2
+```text
+As a DATA ENGINEER
+I want additional transformations, visualisations, and improved Streamlit page
+So that the data analysis is more insightful and to improve user experience
+```
 
+## Epic 3
+```text
+As a DATA ENGINEER
+I want full test coverage, including integration and end-to-end tests
+So that the project code is fully robust and secure 
+```
 
-Extract data
-        Transform data
-        Load data 
-        Present data 
-        Add testing 
-        Understand .coveragerc, .flake8, .gitignore
-        Configure run_app in .toml
