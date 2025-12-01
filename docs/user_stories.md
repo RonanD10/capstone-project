@@ -35,31 +35,26 @@ So that it can be analysed easier
 - [ ] Tests are written to verify the data cleaning process 
 
 
-### USER STORY 3 - Basic Data Enrichment/Aggregation
+### USER STORY 3 - Load Data 
 ```text
 As a DATA ENGINEER/ANALYST
-I want 
-So that 
+I want be able to load the transformed data to the Streamlit
+So that it can be used for analysis and visualisation
 ```
-- [ ] Thorough data exploration has been conducted
-- [ ] 
+- [ ] Data is loaded from the transformed .csv file  
+- [ ] Data is loaded in less than 30s 
+- [ ] Loading occurs without errors and data integrity is maintained
+- [ ] Successful loadings are logged
+- [ ] Data is stored in Pandas DataFrame for further processing
+- [ ] Tests are written to verify the data extraction process 
 
-### USER STORY 4 - Load Data 
+### USER STORY 4 - Basic Streamlit App 
 ```text
 As a DATA ENGINEER/ANALYST
-I want 
-So that 
+I want be able to run a Streamlit app 
+So that the data can be visualised and analysed 
 ```
 
-- [ ] 
-- [ ] 
-
-### USER STORY 5 - Basic Streamlit App 
-```text
-As a DATA ENGINEER/ANALYST
-I want 
-So that 
-```
 
 At least two types of visualisation e.g. bar chart, line chart, scatter plot, map
         Interactive visual (filtering or sorting)
@@ -69,29 +64,55 @@ At least two types of visualisation e.g. bar chart, line chart, scatter plot, ma
 
 
 
-### USER STORY 6 - Basic Visualisations
+### USER STORY 5 - Basic Visualisations
 ```text
 As a DATA ENGINEER/ANALYST
 I want 
 So that 
 ```
-
 - [ ] 
-
-### USER STORY 7 - Automated Scripting
-```text
-As a DATA ENGINEER/ANALYST
-I want 
-So that 
-```
-
 
 
 ## Epic 2
 ```text
-As a DATA ENGINEER
-I want additional transformations, visualisations, and improved Streamlit page
+As a SPORTS DATA ANALYST
+I want additional transformations, visualisations, and improved Streamlit app 
 So that the data analysis is more insightful and to improve user experience
+```
+
+### USER STORY 1 - App Feature 1
+```text
+As a SPORTS DATA ANALYST
+I want the web app to have a quality homepage 
+So that the app usage is clear and user experience is good 
+```
+
+### USER STORY 1 - App Feature 2 
+```text
+As a SPORTS DATA ANALYST
+I want the web app to have an optimal athlete builder for any sport
+So that sports analysts can make better team selections
+```
+
+### USER STORY 1 - App Feature 3 
+```text
+As a SPORTS DATA ANALYST
+I want the web app to have 
+So that sports analysts can make better team selections
+```
+
+### USER STORY 1 - App Feature 4 
+```text
+As a SPORTS DATA ANALYST
+I want Olympic-themed styling 
+So that the app is visually pleasing and consistent
+```
+
+### USER STORY 1 - App Feature 5 
+```text
+As a SPORTS DATA ANALYST
+I want 
+So that 
 ```
 
 ## Epic 3

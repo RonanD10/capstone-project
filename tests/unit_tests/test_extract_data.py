@@ -1,6 +1,6 @@
 import pandas as pd
 import pytest
-from src.extract.extract import (
+from src.etl.extract.extract import (
     extract_data,
     TYPE,
     FILE_PATH,

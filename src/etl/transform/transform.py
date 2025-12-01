@@ -1,10 +1,7 @@
 import pandas as pd
 from src.utils.logging_utils import setup_logger
 from src.utils.file_utils import save_dataframe_to_csv
-
-
-OUTPUT_DIR = "data/processed"
-FILE_NAME = "cleaned_data.csv"
+from src.etl.transform.clean_data import clean_data
 
 
 logger = setup_logger("transform_data", "transform_data.log")
@@ -14,56 +11,16 @@ def transform_data(data) -> pd.DataFrame:
     try:
         logger.info("Starting data transformation process...")
         logger.info("Cleaning data...")
-        data = standardise_column_names(data)
-        data = standardise_object_columns(data)
-        data = convert_id_to_string(data)
-        data = drop_duplicates(data)
-        data = fill_missing_values(data)
+        clean_data(data)
+        # enrich_data(data)
+        # aggregate_data(data)
         logger.info("Data cleaned successfully.")
-        save_dataframe_to_csv(data, OUTPUT_DIR, FILE_NAME)
         return data
     except Exception as e:
         logger.error(f"Data transformation failed: {str(e)}")
         raise
 
 
-def standardise_column_names(data: pd.DataFrame) -> pd.DataFrame:
-    # Ensure consistent column names, including units
-    cols = data.columns
-    cols_standardised = [c.lower() for c in cols]
-    data = data.rename(columns=dict(zip(cols, cols_standardised)))
-    data = data.rename(columns={"weight": "weight_kg", "height": "height_cm"})
-    return data 
-
-
-def standardise_object_columns(data: pd.DataFrame) -> pd.DataFrame:
-    # Ensure object column data is titled 
-    object_cols = data.select_dtypes(include=["object"])
-    for col in object_cols:
-        data[col] = data[col].str.title()
-    return data 
-
-
-def convert_id_to_string(data: pd.DataFrame) -> pd.DataFrame:
-    # Ensure id is object
-    data["id"] = data["id"].astype(str)
-    return data 
-
- 
-def drop_duplicates(data: pd.DataFrame) -> pd.DataFrame:
-    data = data.drop_duplicates()
-    data.reset_index(drop=True, inplace=True)
-    return data 
-
-
-def fill_missing_values(data: pd.DataFrame) -> pd.DataFrame:
-    # Use sport groups to impute missing age, height, weight 
-    data['age'] = data['age'].fillna(data.groupby('sport')['age'].transform('mean'))
-    data['height_cm'] = data['age'].fillna(data.groupby('sport')['height_cm'].transform('mean'))
-    data['weight_kg'] = data['age'].fillna(data.groupby('sport')['weight_kg'].transform('mean'))
-    # Convert missing medal to "No Medal"
-    data["medal"] = data["medal"].fillna("No Medal")
-    return data 
 
 
 

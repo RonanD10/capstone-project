@@ -19,12 +19,15 @@
 - Explored resources in detail and noted files to return to in further detail and created a folder for grouping these files
 - Set up planning structure with epics, user stories, acceptance criteria, and Kanban boards
 - Improved knowledge of planning techniques and attempted to populate planning files, but struggled, so prepared questions for Q&A the next day
+
 ### Day 2 - Fri 
-- 
-### Day 3 - Sat 
-### Day 5 - Mon 
-### Day 4 - Sun 
-### Day 6 - Tue
-### Day 7 - Wed
-### Day 8 - Thu
-### Day 9 - Fri   
+- Created the extract phase of the pipeline, along with unit and component tests 
+- Fully understood the planning workflow, after asking for more info at the Q&A, and created an organised plan with epics, user stories, acceptance criteria, and Kanban boards for the project and my learning -- the learning board keeps a backlog of things to learn without interrupting delivery. Unsurprisingly, the planning workflow is very, very effective on many levels, and synergises exceptionally well with the systematic and logical nature of programming. Really enjoying it and excited to become really fluent at all software development practices; amazing skillset to have. 
+
+### Day 3 - Mon 
+-
+
+### Day 4 - Tue
+### Day 5 - Wed
+### Day 6 - Thu
+### Day 7 - Fri   

@@ -24,14 +24,15 @@ def main():
         # Transformation phase
         logger.info("Beginning data transformation phase")
         # Create output directory and file
-        output_dir = Path("data/processed")
-        output_dir.mkdir(parents=True, exist_ok=True)
         transformed_data = transform_data(extracted_data)
 
-        # # Create high_value_customers.csv for E2E test validation
+        output_dir = Path("data/processed")
+        output_dir.mkdir(parents=True, exist_ok=True)
+        logger.info("Data transformation phase completed")
+        # Create high_value_customers.csv for E2E test validation
         # output_file = output_dir / "high_value_customers.csv"
         # customers.to_csv(output_file, index=False)
-        logger.info("Data transformation phase completed")
+        
 
         # # Load phase
         # logger.info("Beginning data load phase")
