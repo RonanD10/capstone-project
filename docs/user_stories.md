@@ -33,7 +33,8 @@ So that it can be analysed easier
 - [x] All strings have been standardised
 - [x] All categorical variables have been handled 
 - [x] Cleaning occurs without errors and data integrity is maintained
-- [ ] Tests are written to verify the data cleaning process 
+- [x] Unit tests are written to verify the data cleaning process 
+- [ ] Component tests are written to verify the data cleaning process  
 
 
 ### USER STORY 3 - Load Data 
@@ -56,7 +57,7 @@ As a DATA ENGINEER/ANALYST
 I want be able to run a Streamlit app 
 So that the data can be visualised and analysed 
 ```        
-- [ ] run_app script launches app and uses loaded data 
+- [x] run_app script launches app and uses loaded data 
 - [x] Basic homepage is displayed with a placeholder title
 - [x] Second page 
 - [x] Basic side bar for navigating between pages
@@ -67,16 +68,17 @@ As a DATA ENGINEER/ANALYST
 I want be able to display data visualisatons
 So that data insights can be easily understood 
 ```
-- [ ] On homepage, display ordered bar chart of avg age per event
-- [ ] On homepage, display line chart of avg gold medalist age per Olympics
+- [x] Display ordered bar chart of avg age per event (summer and winter separate)
+- [x] Display line chart of avg gold medalist age per Olympics
 
 
 ## Epic 2
 ```text
 As a SPORTS DATA ANALYST
-I want additional transformations, visualisations, and improved Streamlit app 
-So that the data analysis is more insightful and to improve user experience
+I want insightful visualisations and a multi-feature Streamlit app  
+So that I can obtain detailed insights and offer a quality user experience
 ```
+Notes: 
 - Create readme.md instructions for running the app 
 - At least two types of visualisation e.g. bar chart, line chart, scatter plot, map
 - Interactive visual (filtering or sorting)
@@ -85,32 +87,36 @@ So that the data analysis is more insightful and to improve user experience
 ### USER STORY 1 - App Feature 1
 ```text
 As a SPORTS DATA ANALYST
-I want the web app to have a quality homepage 
-So that the app usage is clear and user experience is good 
+I want the web app to have an optimal athlete builder for any sport
+So that I can make better team selections
 ```
+- [ ] Display an athlete attribute profile (age, height, weight)
+- [ ] Create attribute input selection options (gender, sport, event)
+- [ ] Display selected attributes on profile 
+
 
 ### USER STORY 1 - App Feature 2 
 ```text
 As a SPORTS DATA ANALYST
-I want the web app to have an optimal athlete builder for any sport
-So that sports analysts can make better team selections
+I want to be able to visualise the record progression across each sport
+So that I can better understand the progress made in each sport 
 ```
 
-### USER STORY 1 - App Feature 3 
-```text
-As a SPORTS DATA ANALYST
-I want the web app to have 
-So that sports analysts can make better team selections
-```
-
-### USER STORY 1 - App Feature 4 
+### USER STORY 1 - App Feature 3
 ```text
 As a SPORTS DATA ANALYST
 I want Olympic-themed styling 
 So that the app is visually pleasing and consistent
 ```
 
-### USER STORY 1 - App Feature 5 
+### USER STORY 1 - App Feature 4 
+```text
+As a SPORTS DATA ANALYST
+I want a page fun stats about the Olympics 
+So that the user experience is more enjoyable
+```
+
+### USER STORY 1 - App Feature 5
 ```text
 As a SPORTS DATA ANALYST
 I want 
@@ -123,4 +129,6 @@ As a DATA ENGINEER
 I want full test coverage, including integration and end-to-end tests
 So that the project code is fully robust and secure 
 ```
+- Streamlit testing...
+- 
 

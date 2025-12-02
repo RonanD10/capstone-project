@@ -25,9 +25,19 @@
 - Fully understood the planning workflow, after asking for more info at the Q&A, and created an organised plan with epics, user stories, acceptance criteria, and Kanban boards for the project and my learning -- the learning board keeps a backlog of things to learn without interrupting delivery. Unsurprisingly, the planning workflow is very, very effective on many levels, and synergises exceptionally well with the systematic and logical nature of programming. Really enjoying it and excited to become really fluent at all software development practices; amazing skillset to have. 
 
 ### Day 3 - Mon 
+- Completed the ETL pipeline with transform including cleaning, using data cleaning notebook exploration to understand what cleaning is required and get a first feel for the structure of the data. 
+- Planned the final stages of Epic 1, in terms of Streamlit visualisations
+- Came up with ideas for Epic 2, features and visualistions for app. These came to me whilst walking back from the gym. Good to step away. Thanks to my planning structure, these ideas are ready to be planned in detail and executed. Looking forward to this creative part. 
+-  Realised I'm a bit confused by the load part of my pipeline and should ask for help. 
+  
+### Day 4 - Tue
 -
 
-### Day 4 - Tue
 ### Day 5 - Wed
+-
+
 ### Day 6 - Thu
+-
+
 ### Day 7 - Fri   
+-

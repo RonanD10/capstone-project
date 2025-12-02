@@ -9,14 +9,11 @@ kanban
         Write component tests to verify data cleaning process 
         Write unit tests to verify data loading process 
         Write component tests to verify data loading process 
-        Automate etl -> app script
-        Create basic app homepage with placeholder title
-        Create second app page and sidebar for page navigation
-
+        Add doc strings to main functions
+    
     In progress
-        Run Streamlit app successfully
-
-    Done
+        
+    Done Epic 1
         Decide which dataset
         Create GitHub repo 
         Set up project skeleton
@@ -28,6 +25,15 @@ kanban
         Create transform function to implement data cleaning exploration steps
         Write unit tests to verify data cleaning process 
         Load data successfully
+        Run Streamlit app successfully
+        Create basic app homepage with placeholder title
+        Create second app page and sidebar for page navigation
+        Automate etl -> app script
+        Display ordered bar chart of avg age per event (summer and winter separate)
+        Display line chart of avg gold medalist age per Olympics
+
+    Done Epic 2 
+
         
 ```
 

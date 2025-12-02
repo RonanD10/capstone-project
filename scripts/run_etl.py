@@ -1,14 +1,24 @@
-import os
+# import os
 import sys
-from pathlib import Path
-from config.env_config import setup_env
+import pandas as pd 
+# from pathlib import Path
+# from config.env_config import setup_env
 from src.etl.extract.extract import extract_data
 from src.etl.load.load import load_data
 from src.etl.transform.transform import transform_data
 from src.utils.logging_utils import setup_logger
 
 
-def main():
+def main_etl() -> pd.DataFrame:
+    """
+    Extract, transform, load data from CSV file with performance logging.
+
+    Returns: 
+        Dataframe containing records from a CSV file. 
+
+    Raises: 
+        Exception: If CSV file cannot be extracted, transformed, or loaded.
+    """
     
     # Setup ETL pipeline logger
     logger = setup_logger("etl_pipeline", "etl_pipeline.log")
@@ -32,14 +42,13 @@ def main():
         logger.info("Data load phase completed")
 
         logger.info("ETL pipeline completed successfully")
-        # print(
-        #     f"ETL pipeline run successfully in "
-        #     f"{os.getenv('ENV', 'error')} environment!"
-        # )
+
+        return loaded_data
+
     except Exception as e:
         logger.error(f"ETL pipeline failed: {e}")
         sys.exit(1)
 
 
 if __name__ == "__main__":
-    main()
+    main_etl()
