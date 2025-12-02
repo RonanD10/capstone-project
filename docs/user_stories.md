@@ -17,7 +17,8 @@ So that it can be transformed ready for analysis
 - [x] Extraction occurs without errors and data integrity is maintained
 - [x] Successful extractions are logged
 - [x] Data is stored in Pandas DataFrame for further processing
-- [x] Tests are written to verify the data extraction process 
+- [x] Unit tests are written to verify the data extraction process 
+- [x] Component tests are written to verify the data extraction process 
 
 
 ### USER STORY 2 - Data Cleaning 
@@ -41,36 +42,33 @@ As a DATA ENGINEER/ANALYST
 I want be able to load the transformed data to the Streamlit
 So that it can be used for analysis and visualisation
 ```
-- [ ] Data is loaded from the transformed .csv file  
-- [ ] Data is loaded in less than 30s 
-- [ ] Loading occurs without errors and data integrity is maintained
-- [ ] Successful loadings are logged
-- [ ] Data is stored in Pandas DataFrame for further processing
-- [ ] Tests are written to verify the data extraction process 
+- [x] Data is loaded from the transformed .csv file  
+- [x] Data is loaded in less than 30s 
+- [x] Loading occurs without errors and data integrity is maintained
+- [x] Successful loadings are logged
+- [x] Data is stored in Pandas DataFrame for further processing
+- [ ] Unit tests are written to verify the data loading process 
+- [ ] Component tests are written to verify the data loading process 
 
-### USER STORY 4 - Basic Streamlit App 
+### USER STORY 4 - Streamlit App 
 ```text
 As a DATA ENGINEER/ANALYST
 I want be able to run a Streamlit app 
 So that the data can be visualised and analysed 
-```
-
-
-At least two types of visualisation e.g. bar chart, line chart, scatter plot, map
-        Interactive visual (filtering or sorting)
-        Deploy app to community 
-        Create readme.md instructions for running the app 
-- [ ] 
-
-
+```        
+- [ ] run_app script launches app and uses loaded data 
+- [x] Basic homepage is displayed with a placeholder title
+- [x] Second page 
+- [x] Basic side bar for navigating between pages
 
 ### USER STORY 5 - Basic Visualisations
 ```text
 As a DATA ENGINEER/ANALYST
-I want 
-So that 
+I want be able to display data visualisatons
+So that data insights can be easily understood 
 ```
-- [ ] 
+- [ ] On homepage, display ordered bar chart of avg age per event
+- [ ] On homepage, display line chart of avg gold medalist age per Olympics
 
 
 ## Epic 2
@@ -79,7 +77,11 @@ As a SPORTS DATA ANALYST
 I want additional transformations, visualisations, and improved Streamlit app 
 So that the data analysis is more insightful and to improve user experience
 ```
-
+- Create readme.md instructions for running the app 
+- At least two types of visualisation e.g. bar chart, line chart, scatter plot, map
+- Interactive visual (filtering or sorting)
+- Deploy app to community 
+  
 ### USER STORY 1 - App Feature 1
 ```text
 As a SPORTS DATA ANALYST

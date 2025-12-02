@@ -48,13 +48,9 @@ def extract_data() -> pd.DataFrame:
             EXPECTED_PERFORMANCE,
         )
 
-        logger.info(
-            f"Data extraction completed successfully "
-        )
+        logger.info("Data extraction completed successfully")
 
         return extracted_data
     except Exception as e:
         logger.error(f"Error loading {FILE_PATH}: {e}")
         raise Exception(f"Failed to load CSV file: {FILE_PATH}")
-    
-extract_data()

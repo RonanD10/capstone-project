@@ -5,10 +5,16 @@ kanban
     To do
         Configure run_app in .toml
         Populate Definition of Done file
+        Fix PEP8 errors
+        Write component tests to verify data cleaning process 
+        Write unit tests to verify data loading process 
+        Write component tests to verify data loading process 
+        Automate etl -> app script
+        Create basic app homepage with placeholder title
+        Create second app page and sidebar for page navigation
 
     In progress
-        Create detailed project plan using user stories
-        Write tests to verify data cleaning process 
+        Run Streamlit app successfully
 
     Done
         Decide which dataset
@@ -20,6 +26,8 @@ kanban
         Conduct thorough data cleaning exploration
         Configure run_etl in .toml
         Create transform function to implement data cleaning exploration steps
+        Write unit tests to verify data cleaning process 
+        Load data successfully
         
 ```
 

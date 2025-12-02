@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 from config.env_config import setup_env
 from src.etl.extract.extract import extract_data
-# from src.load.load import load_data
+from src.etl.load.load import load_data
 from src.etl.transform.transform import transform_data
 from src.utils.logging_utils import setup_logger
 
@@ -23,27 +23,19 @@ def main():
 
         # Transformation phase
         logger.info("Beginning data transformation phase")
-        # Create output directory and file
-        transformed_data = transform_data(extracted_data)
-
-        output_dir = Path("data/processed")
-        output_dir.mkdir(parents=True, exist_ok=True)
+        transform_data(extracted_data)
         logger.info("Data transformation phase completed")
-        # Create high_value_customers.csv for E2E test validation
-        # output_file = output_dir / "high_value_customers.csv"
-        # customers.to_csv(output_file, index=False)
-        
 
-        # # Load phase
-        # logger.info("Beginning data load phase")
-        # load_data(transformed_data)
-        # logger.info("Data load phase completed")
+        # Load phase
+        logger.info("Beginning data load phase")
+        loaded_data = load_data()
+        logger.info("Data load phase completed")
 
-    #     logger.info("ETL pipeline completed successfully")
-    #     print(
-    #         f"ETL pipeline run successfully in "
-    #         f"{os.getenv('ENV', 'error')} environment!"
-    #     )
+        logger.info("ETL pipeline completed successfully")
+        # print(
+        #     f"ETL pipeline run successfully in "
+        #     f"{os.getenv('ENV', 'error')} environment!"
+        # )
     except Exception as e:
         logger.error(f"ETL pipeline failed: {e}")
         sys.exit(1)

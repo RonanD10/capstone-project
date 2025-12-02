@@ -1,32 +1,60 @@
+import logging
+import os 
+import timeit
 import pandas as pd
-from typing import Optional
-from src.load.create_transactions_by_customers import (
-    create_transactions_by_customers,
+from src.utils.logging_utils import setup_logger, log_extract_success
+from src.etl.transform.clean_data import (
+    OUTPUT_DIR, 
+    FILE_NAME,
+    )
+
+FILE_PATH = os.path.join(
+    os.path.dirname(__file__),
+    "..",
+    "..",
+    "..", 
+    f"{OUTPUT_DIR}",
+    f"{FILE_NAME}",
 )
-from src.utils.logging_utils import setup_logger
+
+# Configure the logger
+logger = setup_logger(__name__, "extract_data.log", level=logging.DEBUG)
+
+EXPECTED_PERFORMANCE = 0.0001
+
+TYPE = "DATA from CSV"
 
 logger = setup_logger("load_data", "load_data.log")
 
 
-def load_data(transformed_data: Optional[pd.DataFrame]) -> None:
+def load_data() -> pd.DataFrame:
     """
-    Load transformed data into the target database.
+    Load data from CSV file with performance logging.
 
-    Args:
-        transformed_data (pd.DataFrame): The cleaned and transformed data to
-        load.
+    Returns:
+        DataFrame containing records from CSV file.
 
     Raises:
-        QueryExecutionError: If database operations fail.
+        Exception: If CSV file cannot be loaded.
     """
-    # Validate input data
-    if transformed_data is None or transformed_data.empty:
-        logger.warning("No data to load - DataFrame is empty or None")
-        return
+    logger.info("Starting data load process...")
+
+    start_time = timeit.default_timer()
+
     try:
-        logger.info("Starting data load process...")
-        create_transactions_by_customers(transformed_data)
+        loaded_data = pd.read_csv(FILE_PATH)
+        loaded_data_execution_time = timeit.default_timer() - start_time
+        log_extract_success(
+            logger,
+            TYPE,
+            loaded_data.shape,
+            loaded_data_execution_time,
+            EXPECTED_PERFORMANCE,
+        )
+
         logger.info("Data load process completed successfully.")
+
+        return loaded_data
     except Exception as e:
         logger.error(f"Data load failed: {str(e)}")
         raise e
