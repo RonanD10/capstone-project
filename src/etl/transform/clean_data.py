@@ -4,10 +4,11 @@ from src.utils.file_utils import save_dataframe_to_csv
 OUTPUT_DIR = "data/processed"
 FILE_NAME = "cleaned_data.csv"
 
+
 def clean_data(data: pd.DataFrame) -> pd.DataFrame:
+    data = drop_duplicates(data)
     data = standardise_column_names(data)
     data = standardise_object_columns(data)
-    data = drop_duplicates(data)
     data = fill_missing_values(data)
 
     save_dataframe_to_csv(data, OUTPUT_DIR, FILE_NAME)
@@ -39,10 +40,14 @@ def drop_duplicates(data: pd.DataFrame) -> pd.DataFrame:
 
 
 def fill_missing_values(data: pd.DataFrame) -> pd.DataFrame:
+    # -- Issue, needs resolving --
     # Use sport groups to impute missing age, height, weight 
-    data['age'] = data['age'].fillna(data.groupby('sport')['age'].transform('mean'))
-    data['height_cm'] = data['height_cm'].fillna(data.groupby('sport')['height_cm'].transform('mean'))
-    data['weight_kg'] = data['weight_kg'].fillna(data.groupby('sport')['weight_kg'].transform('mean'))
-    # Convert missing medal to "No Medal"
-    data["medal"] = data["medal"].fillna("No Medal")
-    return data 
+    # data['Age'] = data['Age'].fillna(data.groupby('sport')['age'].transform('mean'))
+    # data['Height'] = data['height_cm'].fillna(data.groupby('sport')['height_cm'].transform('mean'))
+    # data['weight_kg'] = data['weight_kg'].fillna(data.groupby('sport')['weight_kg'].transform('mean'))
+    # data["medal"] = data["medal"].fillna("No Medal")
+
+    data["age"] = data["age"].fillna(data["age"].mean())
+    data["height_cm"] = data["height_cm"].fillna(data["height_cm"].mean())
+    data["weight_kg"] = data["weight_kg"].fillna(data["weight_kg"].mean())
+    return data

@@ -36,14 +36,14 @@ def main_etl() -> pd.DataFrame:
         transform_data(extracted_data)
         logger.info("Data transformation phase completed")
 
-        # Load phase
-        logger.info("Beginning data load phase")
-        loaded_data = load_data()
-        logger.info("Data load phase completed")
+        # # Load phase
+        # logger.info("Beginning data load phase")
+        # loaded_data = load_data()
+        # logger.info("Data load phase completed")
 
         logger.info("ETL pipeline completed successfully")
 
-        return loaded_data
+        # return loaded_data
 
     except Exception as e:
         logger.error(f"ETL pipeline failed: {e}")

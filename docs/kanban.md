@@ -10,9 +10,12 @@ kanban
         Write unit tests to verify data loading process 
         Write component tests to verify data loading process 
         Add doc strings to main functions
-    
+        Fix event string formatting
+
     In progress
-        
+        Create attribute input selection options - gender, sport, event
+        Display selected attributes on profile 
+
     Done Epic 1
         Decide which dataset
         Create GitHub repo 
@@ -33,7 +36,7 @@ kanban
         Display line chart of avg gold medalist age per Olympics
 
     Done Epic 2 
-
+        Display an athlete attribute profile - age, height, weight
         
 ```
 

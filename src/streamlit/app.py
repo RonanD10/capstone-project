@@ -1,14 +1,7 @@
 import streamlit as st
-from scripts.run_etl import main_etl
+import pandas as pd
 
-
-# Get data from ETL pipeline
-@st.cache_data(show_spinner="Running ETL pipeline...")
-def load_data():
-    return main_etl()
-
-
-DATA = load_data()
+DATA = pd.read_csv("data/processed/cleaned_data.csv")
 
 # Define pages
 home_page = st.Page("pages/home.py", title="Home", icon="🏠")

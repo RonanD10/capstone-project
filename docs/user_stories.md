@@ -90,9 +90,11 @@ As a SPORTS DATA ANALYST
 I want the web app to have an optimal athlete builder for any sport
 So that I can make better team selections
 ```
-- [ ] Display an athlete attribute profile (age, height, weight)
+- [x] Display an athlete attribute profile (age, height, weight)
 - [ ] Create attribute input selection options (gender, sport, event)
 - [ ] Display selected attributes on profile 
+- [ ] Display multiple profiles vertically with title of {sport} - {event}
+
 
 
 ### USER STORY 1 - App Feature 2 

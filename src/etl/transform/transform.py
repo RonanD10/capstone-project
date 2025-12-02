@@ -18,11 +18,3 @@ def transform_data(data) -> pd.DataFrame:
     except Exception as e:
         logger.error(f"Data transformation failed: {str(e)}")
         raise
-
-
-
-
-
-
-
-
