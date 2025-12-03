@@ -4,7 +4,7 @@ import pandas as pd
 # from pathlib import Path
 # from config.env_config import setup_env
 from src.etl.extract.extract import extract_data
-# from src.etl.load.load import load_data
+from src.etl.load.load import load_data
 from src.etl.transform.transform import transform_data
 from src.utils.logging_utils import setup_logger
 
@@ -38,14 +38,14 @@ def main_etl() -> pd.DataFrame:
         transform_data(olympic_data, noc_data)
         logger.info("Data transformation phase completed")
 
-        # # Load phase
-        # logger.info("Beginning data load phase")
-        # loaded_data = load_data()
-        # logger.info("Data load phase completed")
+        # Load phase
+        logger.info("Beginning data load phase")
+        loaded_data = load_data()
+        logger.info("Data load phase completed")
 
         logger.info("ETL pipeline completed successfully")
 
-        # return loaded_data
+        return loaded_data
 
     except Exception as e:
         logger.error(f"ETL pipeline failed: {e}")

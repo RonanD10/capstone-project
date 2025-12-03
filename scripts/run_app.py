@@ -7,7 +7,6 @@ def main():
     subprocess.call([
         sys.executable, "-m", "streamlit", "run", "src/streamlit/app.py"
     ])
-
-
+  
 if __name__ == "__main__":
     main()

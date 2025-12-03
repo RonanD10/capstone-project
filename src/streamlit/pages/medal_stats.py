@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np 
 import plotly.express as px
 from src.streamlit.app import DATA
 
@@ -137,12 +136,12 @@ fig9 = px.bar(
     y="medal_count", x="name",
 )
 
-st.plotly_chart(fig1, use_container_width=True) 
-st.plotly_chart(fig2, use_container_width=True) 
-st.plotly_chart(fig3, use_container_width=True) 
-st.plotly_chart(fig4, use_container_width=True) 
-st.plotly_chart(fig5, use_container_width=True) 
-st.plotly_chart(fig6, use_container_width=True) 
-st.plotly_chart(fig7, use_container_width=True) 
-st.plotly_chart(fig8, use_container_width=True) 
-st.plotly_chart(fig9, use_container_width=True) 
+st.plotly_chart(fig1)
+st.plotly_chart(fig2)
+st.plotly_chart(fig3)
+st.plotly_chart(fig4)
+st.plotly_chart(fig5)
+st.plotly_chart(fig6)
+st.plotly_chart(fig7)
+st.plotly_chart(fig8)
+st.plotly_chart(fig9)
