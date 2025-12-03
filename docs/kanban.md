@@ -11,10 +11,20 @@ kanban
         Write component tests to verify data loading process 
         Add doc strings to main functions
         Fix event string formatting
+        Tidy up notebooks
+        Check over everything       
+        Improve optimal athlete page logic 
+        Look through notebook notes and include unused ideas
+        Fix test failures 
+        Create README with setup and usage instructions
+        Instructions for accessing the data source
+        Deploy streamlit app 
 
     In progress
-        Create attribute input selection options - gender, sport, event
-        Display selected attributes on profile 
+        Summer and Winter bar chart of top 10 countries by total medals
+        Summer and Winter tables bar chart of top 10 country by total gold medals
+        Summer and Winter bar chart of most games won
+        Top 10 athletes with most medals
 
     Done Epic 1
         Decide which dataset
@@ -37,6 +47,10 @@ kanban
 
     Done Epic 2 
         Display an athlete attribute profile - age, height, weight
+        Create attribute input selection options - gender, sport, event
+        Display selected attributes on profile 
+        Ensure testing runs properly
+        Add noc -> country transformation to pipeline 
         
 ```
 

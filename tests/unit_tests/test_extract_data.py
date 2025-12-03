@@ -1,6 +1,6 @@
 import pandas as pd
 import pytest
-from src.etl.extract.extract import (
+from src.etl.extract.extract_olympic_data import (
     extract_data,
     TYPE,
     FILE_PATH,

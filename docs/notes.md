@@ -1,15 +1,3 @@
-# GitHub Repository 
-- All code and scripts
-- The Streamlit app
-- A README with setup and usage instructions
-- Sample data or instructions for accessing the data source
-- User stories and planning documents
-- Test scripts
-
-# Presentation 
-- focus on the project approach and the project development
-
-
 # Journal
 - Document project — how I approached the problem, what challenges faced and how overcame, how the program works, what the key findings are, what would do with more time
 - Daily document of what I did 
@@ -31,7 +19,10 @@
 -  Realised I'm a bit confused by the load part of my pipeline and should ask for help. 
   
 ### Day 4 - Tue
--
+- Completed the run_app-run_etl automation, which is nice, by bug-fixing the ETL pipeline and getting the app to run smoothly. 
+- Added pages to the app and planned what contents to include. 
+- Encountered issues with data cleaning and app logic, which was something of a headache - but I nearly resolved them and knew what to fix in the morning. 
+- Began to have some ideas for my presentation narrative. Need to think in more detail on Thurs. I'll get there. 
 
 ### Day 5 - Wed
 -

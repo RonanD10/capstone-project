@@ -1,6 +1,6 @@
 import pandas as pd
 from unittest.mock import patch
-from src.etl.transform.clean_data import (
+from src.etl.transform.clean_olympic_data import (
     clean_data,
     standardise_column_names,
     standardise_object_columns, 

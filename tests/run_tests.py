@@ -44,11 +44,11 @@ def main():
 
 
 def run_lint() -> None:
-    print("Running linting for Python and SQL files")
+    print("Running linting for Python Files")
     print("Linting Python...")
     subprocess.run(["flake8", "."])
-    print("Linting SQL...")
-    subprocess.run(["sqlfluff", "lint", "."])
+    # print("Linting SQL...")
+    # subprocess.run(["sqlfluff", "lint", "."])
 
 
 if __name__ == "__main__":

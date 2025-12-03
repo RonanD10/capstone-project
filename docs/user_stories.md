@@ -91,39 +91,50 @@ I want the web app to have an optimal athlete builder for any sport
 So that I can make better team selections
 ```
 - [x] Display an athlete attribute profile (age, height, weight)
-- [ ] Create attribute input selection options (gender, sport, event)
-- [ ] Display selected attributes on profile 
+- [x] Create attribute input selection options (gender, sport, event)
+- [x] Display selected attributes on profile 
 - [ ] Display multiple profiles vertically with title of {sport} - {event}
-
-
 
 ### USER STORY 1 - App Feature 2 
 ```text
 As a SPORTS DATA ANALYST
-I want to be able to visualise the record progression across each sport
-So that I can better understand the progress made in each sport 
+I want to be able to analyse medal data over time and by country
+So that I can better understand the history of the games
 ```
+- [ ] Add noc -> country transformation to pipeline 
+- [ ] Summer and Winter bar chart of top 10 countries by total medals 
+- [ ] Summer and Winter tables bar chart of top 10 country by total gold medals
+- [ ] Summer and Winter bar chart of most games won
+- [ ] Top 10 athletes with most medals
+- [ ] Geographic plot of some kind
+- [ ] Other ideas...
+  
+  ### USER STORY 1 - App Feature 3
+```text
+As a SPORTS DATA ANALYST
+I want to have fun facts 
+So that my app offers a variety of analyses
+```
+- [ ] Search dataset to back up facts
+  
 
-### USER STORY 1 - App Feature 3
+### USER STORY 1 - App Feature 4
 ```text
 As a SPORTS DATA ANALYST
 I want Olympic-themed styling 
 So that the app is visually pleasing and consistent
 ```
 
-### USER STORY 1 - App Feature 4 
+<!-- ### USER STORY 1 - App Feature 5 
 ```text
 As a SPORTS DATA ANALYST
-I want a page fun stats about the Olympics 
-So that the user experience is more enjoyable
+I want to be able analyse the record progression across each athletics event
+So that I can better understand the progress made in each sport 
 ```
+- [ ] Create line graph of Olympic record progression for 100m 
+- [ ] Create line graphs of Olympic record progression for 200m, 400m, 800m
+- [ ]  -->
 
-### USER STORY 1 - App Feature 5
-```text
-As a SPORTS DATA ANALYST
-I want 
-So that 
-```
 
 ## Epic 3
 ```text
@@ -132,5 +143,22 @@ I want full test coverage, including integration and end-to-end tests
 So that the project code is fully robust and secure 
 ```
 - Streamlit testing...
-- 
 
+# Notes 
+
+
+### Presentation 
+- Focus on the project approach and the project development
+- See rubric: The following are graded on a 0-3 basis (0 = not at all, 1 = partially, 2 = explained, 3 = explained in depth)
+    - Goals Outlined
+    - Choice of Data
+    - Extract
+    - Transform
+    - Load
+    - Technical Depth (including testing)
+    - Steamlit
+    - Insights
+    - Challenges and Takeaways
+    - Future Dev
+    - Flow
+    - Presentation Style

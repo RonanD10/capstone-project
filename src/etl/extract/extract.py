@@ -1,56 +1,26 @@
-import os
-import logging
 import pandas as pd
-import timeit
-from src.utils.logging_utils import setup_logger, log_extract_success
-
-# Define the file path for the CSV file
-FILE_PATH = os.path.join(
-    os.path.dirname(__file__),
-    "..",
-    "..",
-    "..", 
-    "data",
-    "raw",
-    "unclean_data.csv",
-)
-
-# Configure the logger
-logger = setup_logger(__name__, "extract_data.log", level=logging.DEBUG)
-
-EXPECTED_PERFORMANCE = 0.0001
-
-TYPE = "DATA from CSV"
+from src.etl.extract.extract_olympic_data import extract_olympic_data
+from src.etl.extract.extract_noc_data import extract_noc_data
+from src.utils.logging_utils import setup_logger
 
 
-def extract_data() -> pd.DataFrame:
-    """
-    Extract data from CSV file with performance logging.
+logger = setup_logger("extract_data", "extract_data.log")
 
-    Returns:
-        DataFrame containing records from CSV file.
 
-    Raises:
-        Exception: If CSV file cannot be loaded.
-    """
-    logger.info("Starting data extraction process")
-
-    start_time = timeit.default_timer()
-
+def extract_data() -> tuple[pd.DataFrame, pd.DataFrame]:
     try:
-        extracted_data = pd.read_csv(FILE_PATH)
-        extract_data_execution_time = timeit.default_timer() - start_time
-        log_extract_success(
-            logger,
-            TYPE,
-            extracted_data.shape,
-            extract_data_execution_time,
-            EXPECTED_PERFORMANCE,
+        logger.info("Starting data extraction process")
+
+        olympic_data = extract_olympic_data()
+        noc_data = extract_noc_data()
+
+        logger.info(
+            f"Data extraction completed successfully - "
+            f"Data: {olympic_data.shape}, NOC data: {noc_data.shape}"
         )
 
-        logger.info("Data extraction completed successfully")
+        return (olympic_data, noc_data)
 
-        return extracted_data
     except Exception as e:
-        logger.error(f"Error loading {FILE_PATH}: {e}")
-        raise Exception(f"Failed to load CSV file: {FILE_PATH}")
+        logger.error(f"Data extraction failed: {str(e)}")
+        raise

@@ -4,7 +4,7 @@ import pandas as pd
 # from pathlib import Path
 # from config.env_config import setup_env
 from src.etl.extract.extract import extract_data
-from src.etl.load.load import load_data
+# from src.etl.load.load import load_data
 from src.etl.transform.transform import transform_data
 from src.utils.logging_utils import setup_logger
 
@@ -29,11 +29,13 @@ def main_etl() -> pd.DataFrame:
         # Extract phase
         logger.info("Beginning data extraction phase")
         extracted_data = extract_data()
+        olympic_data, noc_data = extracted_data
         logger.info("Data extraction phase completed")
 
         # Transformation phase
         logger.info("Beginning data transformation phase")
-        transform_data(extracted_data)
+        
+        transform_data(olympic_data, noc_data)
         logger.info("Data transformation phase completed")
 
         # # Load phase
