@@ -21,10 +21,8 @@ kanban
         Deploy streamlit app 
 
     In progress
-        Summer and Winter bar chart of top 10 countries by total medals
-        Summer and Winter tables bar chart of top 10 country by total gold medals
-        Summer and Winter bar chart of most games won
-        Top 10 athletes with most medals
+        Search dataset to back up facts
+        List facts on fun facts page
 
     Done Epic 1
         Decide which dataset
@@ -51,6 +49,10 @@ kanban
         Display selected attributes on profile 
         Ensure testing runs properly
         Add noc -> country transformation to pipeline 
+        Summer and Winter bar chart of top 10 countries by total medals
+        Summer and Winter tables bar chart of top 10 country by total gold medals
+        Summer and Winter bar chart of most games won
+        Top 10 athletes with most medals
         
 ```
 

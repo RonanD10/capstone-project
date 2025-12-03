@@ -101,13 +101,11 @@ As a SPORTS DATA ANALYST
 I want to be able to analyse medal data over time and by country
 So that I can better understand the history of the games
 ```
-- [ ] Add noc -> country transformation to pipeline 
-- [ ] Summer and Winter bar chart of top 10 countries by total medals 
-- [ ] Summer and Winter tables bar chart of top 10 country by total gold medals
-- [ ] Summer and Winter bar chart of most games won
-- [ ] Top 10 athletes with most medals
-- [ ] Geographic plot of some kind
-- [ ] Other ideas...
+- [x] Add noc -> country transformation to pipeline 
+- [x] Summer and Winter bar chart of top 10 countries by total medals 
+- [x] Summer and Winter tables bar chart of top 10 country by total gold medals
+- [x] Top 10 athletes with most medals
+- [x] Geographic plot of some kind
   
   ### USER STORY 1 - App Feature 3
 ```text
@@ -115,15 +113,16 @@ As a SPORTS DATA ANALYST
 I want to have fun facts 
 So that my app offers a variety of analyses
 ```
-- [ ] Search dataset to back up facts
+- [x] Search dataset to back up facts
+- [x] List facts on fun facts page
   
 
-### USER STORY 1 - App Feature 4
+<!-- ### USER STORY 1 - App Feature 4
 ```text
 As a SPORTS DATA ANALYST
 I want Olympic-themed styling 
 So that the app is visually pleasing and consistent
-```
+``` -->
 
 <!-- ### USER STORY 1 - App Feature 5 
 ```text
