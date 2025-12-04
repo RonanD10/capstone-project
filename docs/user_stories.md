@@ -34,7 +34,6 @@ So that it can be analysed easier
 - [x] All categorical variables have been handled 
 - [x] Cleaning occurs without errors and data integrity is maintained
 - [x] Unit tests are written to verify the data cleaning process 
-- [ ] Component tests are written to verify the data cleaning process  
 
 
 ### USER STORY 3 - Load Data 
@@ -48,8 +47,7 @@ So that it can be used for analysis and visualisation
 - [x] Loading occurs without errors and data integrity is maintained
 - [x] Successful loadings are logged
 - [x] Data is stored in Pandas DataFrame for further processing
-- [ ] Unit tests are written to verify the data loading process 
-- [ ] Component tests are written to verify the data loading process 
+- [x] Unit tests are written to verify the data loading process 
 
 ### USER STORY 4 - Streamlit App 
 ```text
@@ -78,11 +76,6 @@ As a SPORTS DATA ANALYST
 I want insightful visualisations and a multi-feature Streamlit app  
 So that I can obtain detailed insights and offer a quality user experience
 ```
-Notes: 
-- Create readme.md instructions for running the app 
-- At least two types of visualisation e.g. bar chart, line chart, scatter plot, map
-- Interactive visual (filtering or sorting)
-- Deploy app to community 
   
 ### USER STORY 1 - App Feature 1
 ```text
@@ -93,7 +86,7 @@ So that I can make better team selections
 - [x] Display an athlete attribute profile (age, height, weight)
 - [x] Create attribute input selection options (gender, sport, event)
 - [x] Display selected attributes on profile 
-- [ ] Display multiple profiles vertically with title of {sport} - {event}
+- [x] Display two profiles vertically with title of {sport} - {event}
 
 ### USER STORY 1 - App Feature 2 
 ```text
@@ -138,13 +131,15 @@ So that I can better understand the progress made in each sport
 ## Epic 3
 ```text
 As a DATA ENGINEER
-I want full test coverage, including integration and end-to-end tests
-So that the project code is fully robust and secure 
+I want full happy-path unit test coverage and clean linting
+So that the project code is robust and conforms to PEP8 standards 
 ```
-- [ ] Unit testing for every function
-- [ ] Component testing for every ...
-- [ ] Integration testing between extract-transform, ...
-- [ ] End-to-end testing 
+- [x] Unit testing for every function
+- [x] Linting passes for all files 
 
 
+## Future Improvements
+- Further testing: component, integration, e2e, and more unit test breadth 
+- Further insights on app, including analysis of performance details - which requires an additional dataset and transformation features
+- More scalable app page logic to make multi-layered pages with robust logic for interactive features
 

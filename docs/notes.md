@@ -25,10 +25,12 @@
 - Began to have some ideas for my presentation narrative. Need to think in more detail on Thurs. I'll get there. 
 
 ### Day 5 - Wed
--
+- Complete the 'build' phase of the project, consisting of the ETL pipeline and the contents of the app. All that remains is writing full unit test coverage and understanding component testing, etc., and implementing if time allows; and preparing for the presentation!
+- Resolved the data loading twice on Streamlit; it was being imported twice with the logic I was using. Could not figure it out until I went for an evening walk, which caused me to figure out the remaining bugs. Stepping away works! 
+- Worked on notebook data analysis to have enough insights for app. Happy with what I have produced -- though, there is always more you can do!
 
 ### Day 6 - Thu
--
+- Completed unit testing, linting, and everything is running smoothly. Prepared for presentation and left open files needed for demonstration. Ironed out remaining creases by creating readme and tidying Kanban boards, user stories.
 
 ### Day 7 - Fri   
--
+- Presented project! 

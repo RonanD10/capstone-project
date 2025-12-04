@@ -2,24 +2,14 @@
 
 ```mermaid
 kanban
-    To do
-        Fix PEP8 errors
-        Write component tests to verify data cleaning process  
-        Write component tests to verify data loading process 
-        Add doc strings to main functions
-       
-        Check over everything       
-        Improve optimal athlete page logic 
-        Look through notebook notes and include unused ideas
-        Create README with setup and usage instructions
-        Instructions for accessing the data source
+    To do       
         Deploy Streamlit app 
-        Write component tests
 
     In progress
-        Tidy up notebooks
-
-
+        Create README with setup and usage instructions + instructions for accessing the data source
+        Check over everything 
+        Add doc strings to main functions    
+        
     Done Epic 1
         Decide which dataset
         Create GitHub repo 
@@ -56,7 +46,9 @@ kanban
     Done Epic 3
         Write extract unit tests
         Write transform unit tests
-        Write remaining unit tests 
+        Write remaining unit tests
+        Tidy up notebooks 
+        Fix PEP8 errors
 
 ```
 
