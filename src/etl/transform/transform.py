@@ -17,9 +17,9 @@ def transform_data(olympic_data: pd.DataFrame, noc_data: pd.DataFrame) -> pd.Dat
         logger.info("Cleaning NOC data...")
         cleaned_noc_data = clean_noc_data(noc_data)
         logger.info("NOC data cleaned successfully.")
-        transform_data = create_country_columns(cleaned_olympic_data, cleaned_noc_data)
+        transformed_data = create_country_columns(cleaned_olympic_data, cleaned_noc_data)
         logger.info("Data cleaned successfully.")
-        return transform_data
+        return transformed_data
     except Exception as e:
         logger.error(f"Data transformation failed: {str(e)}")
         raise

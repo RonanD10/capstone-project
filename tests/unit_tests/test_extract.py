@@ -17,7 +17,6 @@ class TestExtractData:
             }
         )
 
-        # Mock each extract function to return a DataFrame
         mock_extract_noc.return_value = df
         mock_extract_olympic.return_value = df
 
@@ -33,12 +32,13 @@ class TestExtractData:
 
     def test_extract_data_function_exists(self):
         assert callable(extract_data)
-    
-    @patch("src.etl.extract.extract.extract_olympic_data")
+        
     @patch("src.etl.extract.extract.logger")
-    def test_extract_data_exception(self, mock_logger, mock_extract_olympic):
+    @patch("src.etl.extract.extract.extract_olympic_data")
+    def test_extract_data_exception(self, mock_extract_olympic, mock_logger):
         mock_extract_olympic.side_effect = Exception("Data extraction failed")
-        with pytest.raises(Exception) as e:
+
+        with pytest.raises(Exception, match="Data extraction failed"):
             extract_data()
-        assert "Data extraction failed" in str(e.value)
+
         mock_logger.error.assert_called_once()

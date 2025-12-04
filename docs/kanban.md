@@ -11,14 +11,12 @@ kanban
         Check over everything       
         Improve optimal athlete page logic 
         Look through notebook notes and include unused ideas
-        Fix test failures 
         Create README with setup and usage instructions
         Instructions for accessing the data source
-        Deploy streamlit app 
-        Fix test_extract test
+        Deploy Streamlit app 
 
     In progress
-        Write transform unit tests
+        Write component tests 
 
 
     Done Epic 1
@@ -55,7 +53,9 @@ kanban
         Fix event string formatting
     
     Done Epic 3
-        Write extract unit tests 
+        Write extract unit tests
+        Write transform unit tests
+        Write remaining unit tests 
 
 ```
 
@@ -66,8 +66,8 @@ kanban
         Better understand data aggregation/enrichment techniques/practises
         Better awareness of exploratory data analysis techniques/ideas
         Understand .coveragerc, .flake8, .gitignore
-        Understand all functions in run_etl 
         Read logger documentation
+        Better understand testing - comb examples  
         
     In progress  
         
@@ -78,6 +78,7 @@ kanban
         Better understand Kanban planning and its relationship to epics, user stories
         Better understand unittest.mock, pytest fixture 
         Better understand data cleaning techniques/practised
+        Understand all functions in run_etl
 ```
 
 ### Presentation 

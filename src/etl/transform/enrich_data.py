@@ -15,5 +15,3 @@ def create_country_columns(olympic_data: pd.DataFrame, noc_data: pd.DataFrame) -
     save_dataframe_to_csv(olympic_data, OUTPUT_DIR, FILE_NAME)
     
     return olympic_data 
-
-    
