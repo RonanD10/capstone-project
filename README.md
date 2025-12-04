@@ -13,5 +13,6 @@ Usage:
 3. To run the app (which also runs the ETL pipeline), enter ```run_app```
 4. To run tests, enter ```run_test <test_config>```, where ```<test_config>``` can be ```lint```, ```unit```, ```cov```,```component```, ```integration```, ```e2e```, ```all```
 
+![alt text](https://github.com/RonanD10/capstone-project/blob/main/images/homepage.png)
 
 
