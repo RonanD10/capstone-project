@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from src.streamlit.app import DATA
+
 
 st.title("🏅 Medal Records")
 
-df = DATA
+# Load data
+df = pd.read_csv("data/processed/transformed_data.csv")
 
 summer = df[df["season"] == "Summer"]
 winter = df[df["season"] == "Winter"]

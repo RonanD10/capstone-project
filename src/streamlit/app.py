@@ -1,8 +1,5 @@
 import streamlit as st
-import pandas as pd
 
-# Load data
-DATA = pd.read_csv("data/processed/transformed_data.csv")
 
 # Define pages
 home_page = st.Page("pages/home.py", title="Home", icon="🏠")

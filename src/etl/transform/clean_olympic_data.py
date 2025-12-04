@@ -29,7 +29,8 @@ def standardise_object_columns(data: pd.DataFrame) -> pd.DataFrame:
     # Ensure object column data is titled 
     object_cols = data.select_dtypes(include=["object"])
     for col in object_cols:
-        data[col] = data[col].str.capitalize()
+        data[col] = data[col].str.title()
+    data["event"] = data["event"].str.capitalize()
     data["noc"] = data["noc"].str.upper()
     return data 
 

@@ -3,14 +3,10 @@
 ```mermaid
 kanban
     To do
-        Configure run_app in .toml
-        Populate Definition of Done file
         Fix PEP8 errors
-        Write component tests to verify data cleaning process 
-        Write unit tests to verify data loading process 
+        Write component tests to verify data cleaning process  
         Write component tests to verify data loading process 
         Add doc strings to main functions
-        Fix event string formatting
         Tidy up notebooks
         Check over everything       
         Improve optimal athlete page logic 
@@ -19,10 +15,11 @@ kanban
         Create README with setup and usage instructions
         Instructions for accessing the data source
         Deploy streamlit app 
+        Fix test_extract test
 
     In progress
-        Search dataset to back up facts
-        List facts on fun facts page
+        Write transform unit tests
+
 
     Done Epic 1
         Decide which dataset
@@ -53,14 +50,19 @@ kanban
         Summer and Winter tables bar chart of top 10 country by total gold medals
         Summer and Winter bar chart of most games won
         Top 10 athletes with most medals
-        
+        Search dataset to back up facts
+        List facts on fun facts page
+        Fix event string formatting
+    
+    Done Epic 3
+        Write extract unit tests 
+
 ```
 
 # Learning Backlog  
 ```mermaid
 kanban
     To do 
-        
         Better understand data aggregation/enrichment techniques/practises
         Better awareness of exploratory data analysis techniques/ideas
         Understand .coveragerc, .flake8, .gitignore
@@ -78,3 +80,18 @@ kanban
         Better understand data cleaning techniques/practised
 ```
 
+### Presentation 
+- Focus on the project approach and the project development
+- See rubric: The following are graded on a 0-3 basis (0 = not at all, 1 = partially, 2 = explained, 3 = explained in depth)
+    - Goals Outlined
+    - Choice of Data
+    - Extract
+    - Transform
+    - Load
+    - Technical Depth (including testing)
+    - Steamlit
+    - Insights
+    - Challenges and Takeaways
+    - Future Dev
+    - Flow
+    - Presentation Style

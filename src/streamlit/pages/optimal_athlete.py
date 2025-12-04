@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np 
-from src.streamlit.app import DATA
 
 
-df = DATA 
+# Load data
+df = pd.read_csv("data/processed/transformed_data.csv")
 
 sports = df["sport"].unique()
 sports.sort()
@@ -14,6 +14,7 @@ st.title("Optimal Athlete Builder")
 st.text("Build the optimal athlete by choosing a sex, sport, and event.")
 st.text("Results are calculated based on the average across Gold medalists for each combination.")
 st.text("The percentages indicate the deviation from the mean across other athletes in your chosen combination.")
+
 
 def get_events(sport, sex):
     sport_df = df[df["sport"] == sport]

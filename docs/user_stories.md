@@ -141,23 +141,10 @@ As a DATA ENGINEER
 I want full test coverage, including integration and end-to-end tests
 So that the project code is fully robust and secure 
 ```
-- Streamlit testing...
+- [ ] Unit testing for every function
+- [ ] Component testing for every ...
+- [ ] Integration testing between extract-transform, ...
+- [ ] End-to-end testing 
 
-# Notes 
 
 
-### Presentation 
-- Focus on the project approach and the project development
-- See rubric: The following are graded on a 0-3 basis (0 = not at all, 1 = partially, 2 = explained, 3 = explained in depth)
-    - Goals Outlined
-    - Choice of Data
-    - Extract
-    - Transform
-    - Load
-    - Technical Depth (including testing)
-    - Steamlit
-    - Insights
-    - Challenges and Takeaways
-    - Future Dev
-    - Flow
-    - Presentation Style
