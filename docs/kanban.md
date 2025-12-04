@@ -3,10 +3,10 @@
 ```mermaid
 kanban
     To do       
-        Deploy Streamlit app 
+        
 
     In progress
-        Create README with setup and usage instructions + instructions for accessing the data source
+
         Check over everything 
         Add doc strings to main functions    
         
@@ -49,6 +49,8 @@ kanban
         Write remaining unit tests
         Tidy up notebooks 
         Fix PEP8 errors
+        Deploy Streamlit app 
+        Create README with setup and usage instructions + instructions for accessing the data source
 
 ```
 
