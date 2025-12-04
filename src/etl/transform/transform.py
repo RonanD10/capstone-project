@@ -8,7 +8,9 @@ from src.etl.transform.enrich_data import create_country_columns
 logger = setup_logger("transform_data", "transform_data.log")
 
 
-def transform_data(olympic_data: pd.DataFrame, noc_data: pd.DataFrame) -> pd.DataFrame:
+def transform_data(
+        olympic_data: pd.DataFrame,
+        noc_data: pd.DataFrame) -> pd.DataFrame:
     try:
         logger.info("Starting data transformation process...")
         logger.info("Cleaning data...")
@@ -17,7 +19,10 @@ def transform_data(olympic_data: pd.DataFrame, noc_data: pd.DataFrame) -> pd.Dat
         logger.info("Cleaning NOC data...")
         cleaned_noc_data = clean_noc_data(noc_data)
         logger.info("NOC data cleaned successfully.")
-        transformed_data = create_country_columns(cleaned_olympic_data, cleaned_noc_data)
+        transformed_data = create_country_columns(
+            cleaned_olympic_data,
+            cleaned_noc_data
+        )
         logger.info("Data cleaned successfully.")
         return transformed_data
     except Exception as e:

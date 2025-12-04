@@ -29,9 +29,6 @@ class TestTransformData:
         mock_create_country.assert_called_once_with(cleaned_olympic, cleaned_noc)
 
         pd.testing.assert_frame_equal(result, final_df)
-
-        def test_transform_data_function_exists(self):
-            assert callable(transform_data)
    
     @patch("src.etl.transform.transform.logger")
     @patch("src.etl.transform.transform.clean_olympic_data")

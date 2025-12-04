@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+
 
 st.image("images/Olympic_Rings.svg.png", )
 st.title("Welcome to Olympics Analysis!")

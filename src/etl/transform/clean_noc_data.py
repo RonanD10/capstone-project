@@ -7,18 +7,17 @@ FILE_NAME = "cleaned_noc_data.csv"
 
 
 def clean_noc_data(noc_data: pd.DataFrame) -> pd.DataFrame:
-    # Replace the 
     region_map = {
         "ROT": "Refugee Olympic Team",
         "TUV": "Tuvalu",
         "UNK": "Unknown"
-    }   
-    
-    noc_data["region"] = noc_data["region"].fillna(noc_data["NOC"].map(region_map))
+    }
+    noc_data["region"] = noc_data["region"].fillna(
+        noc_data["NOC"].map(region_map)
+    )
 
     # Save the dataframe as a CSV for logging purposes
     # Ensure the directory exists
     save_dataframe_to_csv(noc_data, OUTPUT_DIR, FILE_NAME)
 
     return noc_data
-

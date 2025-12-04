@@ -68,33 +68,36 @@ winter_athlete_gold_medal_count = (
 )
 
 fig1 = px.bar(
-    summer_medal_count.head(10), 
+    summer_medal_count.head(10),
     title="Top 10 Countries with Most Total Summer Medals",
     color=(["red",] * 10), color_discrete_map="identity", y="medal_count", x="country"
     )
 
 fig2 = px.bar(
-    summer_gold_medal_count.head(10), 
+    summer_gold_medal_count.head(10),
     title="Top 10 Countries with Most Total Summer Gold Medals",
     color=(["red",] * 10), color_discrete_map="identity", y="medal_count", x="country"
     )
 
 fig3 = px.bar(
-    winter_medal_count.head(10), 
+    winter_medal_count.head(10),
     title="Top 10 Countries with Most Total Winter Medals",
     y="medal_count", x="country"
     )
 
 fig4 = px.bar(
-    winter_gold_medal_count.head(10), 
+    winter_gold_medal_count.head(10),
     title="Top 10 Countries with Most Total Winter Gold Medals",
     y="medal_count", x="country"
     )
 
 fig5 = px.bar(
-    summer_and_winter_medal_count.head(10), 
+    summer_and_winter_medal_count.head(10),
     title="Top 10 Countries with Most Total Summer and Winter Medals",
-     color=(["green",] * 10), color_discrete_map="identity", y="medal_count", x="country"
+    color=(["green",] * 10),
+    color_discrete_map="identity",
+    y="medal_count",
+    x="country"
     )
 
 fig6 = px.choropleth(
@@ -125,14 +128,14 @@ fig7.update_layout(
 )
 
 fig8 = px.bar(
-    summer_athlete_gold_medal_count.head(10), 
+    summer_athlete_gold_medal_count.head(10),
     title="Top 10 Athletes with Most Total Summer Gold Medals",
     y="medal_count", x="name",
     color=(["red",] * 10), color_discrete_map="identity",
 )
 
 fig9 = px.bar(
-    winter_athlete_gold_medal_count.head(10), 
+    winter_athlete_gold_medal_count.head(10),
     title="Top 10 Athletes with Most Total Winter Gold Medals",
     y="medal_count", x="name",
 )

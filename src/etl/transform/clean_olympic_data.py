@@ -1,4 +1,4 @@
-import pandas as pd 
+import pandas as pd
 from src.utils.file_utils import save_dataframe_to_csv
 
 OUTPUT_DIR = "data/processed"
@@ -13,7 +13,7 @@ def clean_olympic_data(data: pd.DataFrame) -> pd.DataFrame:
 
     save_dataframe_to_csv(data, OUTPUT_DIR, FILE_NAME)
 
-    return data 
+    return data
 
 
 def standardise_column_names(data: pd.DataFrame) -> pd.DataFrame:
@@ -22,34 +22,40 @@ def standardise_column_names(data: pd.DataFrame) -> pd.DataFrame:
     cols_lower = [c.lower() for c in cols]
     data = data.rename(columns=dict(zip(cols, cols_lower)))
     data = data.rename(columns={"weight": "weight_kg", "height": "height_cm"})
-    return data 
+    return data
 
 
 def standardise_object_columns(data: pd.DataFrame) -> pd.DataFrame:
-    # Ensure object column data is titled 
     object_cols = data.select_dtypes(include=["object"])
     for col in object_cols:
         data[col] = data[col].str.title()
     data["event"] = data["event"].str.capitalize()
     data["noc"] = data["noc"].str.upper()
-    return data 
+    return data
 
- 
+
 def drop_duplicates(data: pd.DataFrame) -> pd.DataFrame:
     data = data.drop_duplicates()
     data.reset_index(drop=True, inplace=True)
-    return data 
+    return data
 
 
 def fill_missing_values(data: pd.DataFrame) -> pd.DataFrame:
     # -- Issue, needs resolving --
-    # Use sport groups to impute missing age, height, weight 
-    data["age"] = data.groupby("sport")["age"].transform(lambda x: x.fillna(x.mean()))
-    data["height_cm"] = data.groupby("sport")["height_cm"].transform(lambda x: x.fillna(x.mean()))
-    data["weight_kg"] = data.groupby("sport")["weight_kg"].transform(lambda x: x.fillna(x.mean()))
+    # Use sport groups to impute missing age, height, weight
+    data["age"] = data.groupby("sport")["age"].transform(
+         lambda x: x.fillna(x.mean())
+    )
+    data["height_cm"] = data.groupby("sport")["height_cm"].transform(
+        lambda x: x.fillna(x.mean())
+    )
+    data["weight_kg"] = data.groupby("sport")["weight_kg"].transform(
+        lambda x: x.fillna(x.mean())
+    )
     data["medal"] = data["medal"].fillna("No Medal")
 
-    # For sports with entirely missing height, weight, fill using overall averages
+    # For sports with entirely missing height, weight
+    # fill using overall averages
     data["height_cm"] = data["height_cm"].fillna(data["height_cm"].mean())
     data["weight_kg"] = data["weight_kg"].fillna(data["weight_kg"].mean())
     return data

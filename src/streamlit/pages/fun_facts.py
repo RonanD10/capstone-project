@@ -1,4 +1,4 @@
-import streamlit as st 
+import streamlit as st
 
 st.title("💡 Fun Olympic Facts")
 st.write("---")
@@ -13,4 +13,3 @@ st.write("---")
 st.text("💡 Summer sports that are no longer played include: polo, rugby union, art competitions!")
 st.write("---")
 st.text("💡 Summer sports continuously played: athletics, swimming, cycling, fencing, gymnastics")
-

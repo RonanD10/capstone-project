@@ -1,10 +1,6 @@
-# import os
 import sys
-import pandas as pd 
-# from pathlib import Path
-# from config.env_config import setup_env
+import pandas as pd
 from src.etl.extract.extract import extract_data
-# from src.etl.load.load import load_data
 from src.etl.transform.transform import transform_data
 from src.utils.logging_utils import setup_logger
 
@@ -13,13 +9,12 @@ def main_etl() -> pd.DataFrame:
     """
     Extract, transform, load data from CSV file with performance logging.
 
-    Returns: 
-        Dataframe containing records from a CSV file. 
+    Returns:
+        Dataframe containing records from a CSV file.
 
-    Raises: 
+    Raises:
         Exception: If CSV file cannot be extracted, transformed, or loaded.
     """
-    
     # Setup ETL pipeline logger
     logger = setup_logger("etl_pipeline", "etl_pipeline.log")
 
@@ -34,7 +29,7 @@ def main_etl() -> pd.DataFrame:
 
         # Transformation phase
         logger.info("Beginning data transformation phase")
-        
+
         transform_data(olympic_data, noc_data)
         logger.info("Data transformation phase completed")
 

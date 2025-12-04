@@ -9,14 +9,18 @@ FILE_PATH = os.path.join(
     os.path.dirname(__file__),
     "..",
     "..",
-    "..", 
+    "..",
     "data",
     "raw",
     "unclean_data.csv",
 )
 
 # Configure the logger
-logger = setup_logger(__name__, "extract_olympic_data.log", level=logging.DEBUG)
+logger = setup_logger(
+    __name__,
+    "extract_olympic_data.log",
+    level=logging.DEBUG
+    )
 
 EXPECTED_PERFORMANCE = 0.0001
 

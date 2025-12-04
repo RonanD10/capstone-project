@@ -7,16 +7,17 @@ kanban
         Write component tests to verify data cleaning process  
         Write component tests to verify data loading process 
         Add doc strings to main functions
-        Tidy up notebooks
+       
         Check over everything       
         Improve optimal athlete page logic 
         Look through notebook notes and include unused ideas
         Create README with setup and usage instructions
         Instructions for accessing the data source
         Deploy Streamlit app 
+        Write component tests
 
     In progress
-        Write component tests 
+        Tidy up notebooks
 
 
     Done Epic 1
