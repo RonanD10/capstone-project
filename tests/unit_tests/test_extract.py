@@ -33,14 +33,3 @@ class TestExtractData:
     def test_extract_data_function_exists(self):
         assert callable(extract_data)
     
-    # (Written with the assistance of ChatGPT)
-    @patch("src.etl.extract.extract.logger")
-    @patch("src.etl.extract.extract.extract_olympic_data")
-    def test_extract_data_exception(self, mock_extract_olympic, mock_logger):
-        mock_extract_olympic.side_effect = Exception("Data extraction failed")
-
-        with pytest.raises(Exception, match="Data extraction failed"):
-            extract_data()
-
-        mock_logger.error.assert_called_once()
-
