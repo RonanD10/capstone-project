@@ -79,3 +79,4 @@ def test_log_data_error(mocker, mock_logger):
     mock_logger.error.assert_called_once_with(
         f"Error loading {FILE_PATH}: Failed to load CSV file: {FILE_PATH}"
     )
+

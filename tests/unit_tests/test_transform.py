@@ -3,7 +3,7 @@ from unittest.mock import patch
 import pytest
 from src.etl.transform.transform import transform_data
 
-
+# (Written with the assistance of ChatGPT)
 class TestTransformData:
     @patch("src.etl.transform.transform.create_country_columns")
     @patch("src.etl.transform.transform.clean_noc_data")
@@ -40,3 +40,4 @@ class TestTransformData:
             transform_data(olympic_data, noc_data)
 
         mock_logger.error.assert_called_once()
+        
